@@ -34,15 +34,15 @@ development:
   host: localhost
   user: postgres
   password: Satwik@2000
-  database: saas_db
+  database: cafe_db
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: test_saas_db
+  database: test_cafe_db
 
 production:
   <<: *default
-  database: prod_saas_db
+  database: prod_cafe_db
