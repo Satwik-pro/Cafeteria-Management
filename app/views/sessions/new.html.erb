@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="Login-Header">
+      <img src="Cocafe-logo.jpeg" alt="Logo" />
+    </div>
+    <br>
+    <div id="Error">
+      <%= flash[:error] %>
+    </div>
+    <article class="Login-Article">
+      <div>Log In To Your Account</div>
+      <%= form_with url: sessions_path do |form| %>
+      <br /><br><br>
+      <span class="Email-Text"> Enter E-Mail Address </span>
+      <br />
+      <%= form.email_field :email, :autofocus => true %>
+      <br /><br>
+      <span class="Email-Text"> Enter Password </span>
+      <br />
+      <%= form.password_field :password %>
+      <br /><br /><br>
+      <%= form.submit "Log In", class: "Form-submit" %>
+      <br /><br /><br>
+      <span class="SignUp">
+        New To CoCafe?
+        <%= link_to "Sign Up Here!", new_user_path %>
+      </span
+      >
+  <% end %>
+      <br /><br />
+    </article>
+    <br />
+    <div class="Forgot-Password">
+      <a href="#">Forgot Password?</a>
+    </div>
+  </body>
+</html>

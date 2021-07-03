@@ -1,33 +1,123 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CoCafe</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <link href="CssDesign.css" rel="stylesheet" /> -->
+  </head>
+  <body id="FrontPage-Body">
+    <header>
+      <img src="Cocafe-logo.jpeg" alt="Cafeteria Logo" />
+      <div>CoCafe</div>
+      <div class="FrontPage-Search">
+        <input type="text" placeholder="What are you looking for?" />
+        <button type="submit"></button>
+      </div>
+      <span id="Name">
+      Hi! <%= @current_user.first_name %>
+      </span>
+      <%= link_to "Sign Out", destroy_session_path, method: "delete", :id => 'Sign-Out' %>
+    </header>
 
-<h1>Menu Items</h1>
+    <navbar>
+      <ul class="Navigation">
+          <li><a href="Menu.html">Menu</a></li>
+          <li><a href="Orderlist.html">Order List</a></li>
+          <li><a href="Myorders.html">My Orders</a></li>
+          <li><a href="Contactus.html">Contact Us</a></li>
+      </ul>
+    </navbar>
+    <br /><br />
+    <span class="Menu-Text">MENU</span>
+    <br /><br />
 
-<table>
-  <thead>
-    <tr>
-      <th>Menu category</th>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <article class="Dishes">
+      <%= render partial: "MenuItem-section" %>
+      <!-- <div class="Dish-Card">
+        <img class="Dish" src="dish1.JPG" alt="" />
+        <div class="Dish-Name">French Fries</div>
+        <div class="Dish-Price">Price: ₹ 120</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
 
-  <tbody>
-    <% @menu_items.each do |menu_item| %>
-      <tr>
-        <td><%= menu_item.menu_category_id %></td>
-        <td><%= menu_item.name %></td>
-        <td><%= menu_item.description %></td>
-        <td><%= menu_item.price %></td>
-        <td><%= link_to 'Show', menu_item %></td>
-        <td><%= link_to 'Edit', edit_menu_item_path(menu_item) %></td>
-        <td><%= link_to 'Destroy', menu_item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <div class="Dish-Card">
+        <img class="Dish" src="dish2.JPG" alt="" />
+        <div class="Dish-Name">Chole Bhature</div>
+        <div class="Dish-Price">Price: ₹ 150</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
 
-<br>
+      <div class="Dish-Card">
+        <img class="Dish" src="dish3.JPG" alt="" />
+        <div class="Dish-Name">Large Pizza</div>
+        <div class="Dish-Price">Price: ₹ 240</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
 
-<%= link_to 'New Menu Item', new_menu_item_path %>
+      <div class="Dish-Card">
+        <img class="Dish" src="dish4.JPG" alt="" />
+        <div class="Dish-Name">Burger</div>
+        <div class="Dish-Price">Price: ₹ 100</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish5.JPG" alt="" />
+        <div class="Dish-Name">Chowmein</div>
+        <div class="Dish-Price">Price: ₹ 160</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish6.JPG" alt="" />
+        <div class="Dish-Name">Momos</div>
+        <div class="Dish-Price">Price: ₹ 70 (8 Pcs)</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish7.JPG" alt="" />
+        <div class="Dish-Name">Manchurian</div>
+        <div class="Dish-Price">Price: ₹ 180</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish8.JPG" alt="" />
+        <div class="Dish-Name">Veg Roll</div>
+        <div class="Dish-Price">Price: ₹ 80</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish9.JPG" alt="" />
+        <div class="Dish-Name">Soft Drinks</div>
+        <div class="Dish-Price">Price: ₹ 60</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish10.JPG" alt="" />
+        <div class="Dish-Name">Ice Cream</div>
+        <div class="Dish-Price">Price: ₹ 80</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish11.JPG" alt="" />
+        <div class="Dish-Name">Fruit Custard</div>
+        <div class="Dish-Price">Price: ₹ 90</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div>
+
+      <div class="Dish-Card">
+        <img class="Dish" src="dish12.JPG" alt="" />
+        <div class="Dish-Name">Oreo Shake</div>
+        <div class="Dish-Price">Price: ₹ 60</div>
+        <button class="Add-To-Orders" onclick="document.location='Menu+Cart.html'">Add To Orders</button>
+      </div> -->
+    </article>
+    <footer> </footer>
+  </body>
+</html>

@@ -13,3 +13,615 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: rgb(214, 214, 247);
+  font-family: serif;
+}
+
+#FrontPage-Body header img {
+  height: 120px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-bottom: 20px;
+}
+
+#FrontPage-Body header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#FrontPage-Body header div {
+  display: flex;
+  font-size: 100px;
+  color: rgb(3, 3, 112);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.FrontPage-Search input {
+  font-size: 20px;
+  height: 30px;
+  width: 450px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  border: 3px solid rgb(3, 3, 112);
+}
+
+.FrontPage-Search button {
+  display: flex;
+  width: 40px;
+  height: 38px;
+  border-radius: 10px;
+  border: 3px solid rgb(3, 3, 112);
+  background-image: url("Search.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.Login {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 23px;
+  color: white;
+  background-color: rgb(3, 3, 112);
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.Sign-Up {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
+  color: white;
+  background-color: rgb(3, 3, 112);
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.Navigation {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(3, 3, 112);
+}
+
+.Navigation li {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.Navigation li a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  padding: 3px 5px;
+  display: flex;
+}
+
+.Navigation li a:hover {
+  background-color: white;
+  color: rgb(3, 3, 112);
+}
+
+.Login-Header {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Login-Header img {
+  height: 150px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border: 2px solid rgb(3, 3, 112);
+}
+
+.Login-Article {
+  background-color: rgb(3, 3, 112);
+  width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-size: 30px;
+  border: 2px solid rgb(3, 3, 112);
+  border-radius: 10px;
+}
+
+.Login-Article div {
+  padding: 50px 50px 10px 50px;
+  color: white;
+}
+
+.Email-Text {
+  color: white;
+  font-size: 18px;
+}
+
+.Login-Article input {
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.SignUp {
+  font-size: 20px;
+  color: white;
+}
+
+.SignUp a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.Forgot-Password {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Forgot-Password a {
+  color: rgb(3, 3, 112);
+  text-decoration: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  font-size: 20px;
+}
+
+.Forgot-Password a:hover {
+  background-color: rgb(214, 214, 247);
+}
+
+.Signup-Article {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.Signup-Article img {
+  height: 150px;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Cocafe-Tag {
+  font-size: 66px;
+  color: rgb(3, 3, 112);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Signup-Body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Signup-Article-Form {
+  background-color: rgb(3, 3, 112);
+  width: 500px;
+  text-align: center;
+  font-size: 30px;
+  border: 2px solid rgb(3, 3, 112);
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+}
+
+.Signup-Article-Form div {
+  padding: 50px 50px 10px 50px;
+  color: white;
+}
+
+.Signup-Article-Form input {
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+
+.Signup-Article-Form button {
+  height: 40px;
+  width: 180px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(214, 214, 247);
+}
+
+.Menu-Text {
+  font-size: 30px;
+  margin-left: 15px;
+  color: rgb(3, 3, 112);
+}
+
+.Dishes {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+}
+
+.Dish-Card {
+  text-align: center;
+  padding: 10px 10px 70px 12px;
+}
+
+.Dish {
+  width: 350px;
+  height: 250px;
+  transition: 0.3s all ease-in-out;
+}
+
+.Dish:hover {
+  transform: scale(1.02);
+}
+
+.Dish-Name {
+  font-size: 25px;
+  color: rgb(3, 3, 112);
+  padding: 5px 0px 5px 0px;
+}
+
+.Order-Image {
+  transition: 0.3s all ease-in-out;
+}
+
+.Order-Image:hover {
+  transform: scale(1.02);
+}
+
+.Dish-Price {
+  font-size: 20px;
+  color: rgb(3, 3, 112);
+}
+
+.Add-To-Orders {
+  height: 30px;
+  width: 200px;
+  color: white;
+  background-color: rgb(3, 3, 112);
+  border: 2px solid rgb(3, 3, 112);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.Contact-Details {
+  display: flex;
+  align-items: center;
+}
+
+.Contact-Details span {
+  font-size: 40px;
+  color: rgb(3, 3, 112);
+}
+
+.Contact-Details img {
+  margin-left: 140px;
+}
+
+.Order-Image {
+  width: 300px;
+  height: 200px;
+}
+
+.Current-Orders {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 0px 50px 60px;
+}
+
+.Order-Description p {
+  font-size: 25px;
+  color: rgb(3, 3, 112);
+  margin-left: 50px;
+}
+
+.Remove-From-Cart {
+  margin-left: 50px;
+}
+
+.Remove-From-Cart button {
+  color: rgb(3, 3, 112);
+  background-color: red;
+  border-radius: 5px;
+  border: 5px solid red;
+  cursor: pointer;
+  font-size: 20px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Order-Article {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+}
+
+.Menu-Cart {
+  display: flex;
+}
+
+.Dishes-Cart {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(490px, 1fr));
+  max-width: 1000px;
+}
+
+.Order-Delivered {
+  margin-left: 50px;
+}
+
+.Order-Delivered button {
+  color: white;
+  background-color: green;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: 5px solid green;
+  font-size: 20px;
+  width: fit-content;
+  height: fit-content;
+}
+
+.Popup-Cart {
+  align-items: center;
+  text-align: center;
+}
+
+.Cur-Orders {
+  font-size: 30px;
+  color: rgb(3, 3, 112);
+  float: right;
+  margin-right: 170px;
+}
+
+.Remove-From-Orders {
+  height: 30px;
+  width: 200px;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+.Total-Price {
+  font-size: 25px;
+  color: rgb(3, 3, 112);
+}
+
+.Checkout-button button {
+  color: white;
+  background-color: green;
+  width: 200px;
+  height: 35px;
+  border-radius: 5px;
+  border: 5px solid green;
+  font-size: 20px;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.Quantity {
+  align-items: center;
+  margin-left: 135px;
+  padding: 5px 0px 5px 0px;
+}
+
+.Quantity span {
+  font-size: 25px;
+  color: rgb(3, 3, 112);
+  padding: 0px 5px 0px 5px;
+}
+
+.Quantity img {
+  width: 30px;
+  height: 30px;
+}
+
+.Quantity img:hover {
+  cursor: pointer;
+}
+
+.Proceed-To-Pay {
+  padding: 20px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.Proceed-To-Pay button {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+  width: 520px;
+  background-color: #18c2c0;
+  border: none;
+  color: #fff;
+  padding: 18px;
+  border-radius: 5px;
+  outline: none;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.Proceed-To-Pay button:hover {
+  background-color: #15aeac;
+}
+
+.Proceed-To-Pay button:active {
+  background-color: #139b99;
+}
+
+.COD {
+  align-items: center;
+  justify-content: center;
+}
+
+.COD input {
+  height: 20px;
+  width: 20px;
+}
+
+.Payment {
+  background-color: rgb(3, 3, 112);
+  width: 500px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-size: 30px;
+  border: 2px solid rgb(3, 3, 112);
+  border-radius: 10px;
+}
+
+.On-The-Way {
+  background: rgb(138, 45, 138);
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  justify-content: center;
+  height: 90%;
+  width: 90%;
+}
+
+.On-The-Way img {
+  height: 40%;
+  width: 40%;
+}
+
+.Text-OTW {
+  color: rgb(3, 3, 112);
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+
+.Back-To-Home {
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.SignUp a:hover {
+  background-color: rgb(3, 3, 112);
+}
+
+.Login-Article .Form-submit {
+  height: 40px;
+  width: 180px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(214, 214, 247);
+}
+
+.Signup-Article-Form .Form-submit {
+  height: 40px;
+  width: 180px;
+  font-size: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: rgb(214, 214, 247);
+}
+
+#Error {
+  display: flex;
+  font-size: 25px;
+  color: red;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+#Sign-Out {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 23px;
+  color: white;
+  background-color: rgb(3, 3, 112);
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+#Name {
+  margin-top: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 23px;
+  color: rgb(3, 3, 112);
+  padding: 5px 15px;
+  text-decoration: none;
+}
+
+.Welcome {
+  color: rgb(3, 3, 112);
+  font-size: 80px;
+  font-family: "Brush Script MT", cursive;
+}
+
+.Centered {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+
+.Up {
+  font-family: "Brush Script MT", cursive;
+  color: white;
+  font-size: 60px;
+}
+
+.In {
+  font-family: "Brush Script MT", cursive;
+  color: white;
+  font-size: 60px;
+}
+
+#UP {
+  color: white;
+  font-size: 45px;
+  font-family: "Brush Script MT", cursive;
+}
+
+#UP:hover {
+  background-color: transparent;
+}
+
+#IN {
+  color: white;
+  font-size: 45px;
+  font-family: "Brush Script MT", cursive;
+}
+
+#IN:hover {
+  background-color: transparent;
+}
