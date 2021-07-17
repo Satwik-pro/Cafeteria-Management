@@ -423,7 +423,6 @@ body {
 
 .Quantity {
   align-items: center;
-  margin-left: 135px;
   padding: 5px 0px 5px 0px;
 }
 
@@ -525,6 +524,14 @@ body {
 .Back-To-Home {
   text-decoration: none;
   font-size: 20px;
+  color: white;
+  background-color: rgb(3, 3, 112);
+  border: 2px solid rgb(3, 3, 112);
+  border-radius: 10px;
+}
+
+.Back-To-Home:hover {
+  cursor: pointer;
 }
 
 .SignUp a:hover {
@@ -624,4 +631,12 @@ body {
 
 #IN:hover {
   background-color: transparent;
+}
+
+.centerit {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

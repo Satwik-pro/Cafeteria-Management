@@ -1,27 +1,30 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Menu Categories</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @menu_categories.each do |menu_category| %>
-      <tr>
-        <td><%= menu_category.name %></td>
-        <td><%= link_to 'Show', menu_category %></td>
-        <td><%= link_to 'Edit', edit_menu_category_path(menu_category) %></td>
-        <td><%= link_to 'Destroy', menu_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Menu Category', new_menu_category_path %>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CssDesign.css" rel="stylesheet" />
+    <title>Checkout</title>
+  </head>
+  <body class="Checkout-Body">
+    <header class="Login-Header">
+      <img src="Cocafe-logo.jpeg" alt="Logo" />
+    </header>
+    <div class="Payment">
+      <form>
+        <div class="COD">
+          <input type="radio" id="COD" name="COD" />
+          <br><br>
+          <label style="color: white;">Cash On Delivery</label> <br />
+        </div>
+      </form>
+    </div>
+    <div class="Proceed-To-Pay">
+      <%= form_with(url: "/orders/#{@current_user.id}", method: "delete") do %>
+      <% sum = params[:payment] %>
+      <%= button_tag("Proceed To Pay ₹ #{sum}", class: "", type: "submit", :value => @current_user.id, :name => "id") %>
+      <% end %>
+    </div>
+  </body>
+</html>
