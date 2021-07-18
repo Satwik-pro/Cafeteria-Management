@@ -1,1 +1,37 @@
-<h1>You got it Right!</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <div class="Login-Header">
+      <img src="Cocafe-logo.jpeg" alt="Logo" />
+    </div><div class="Centered">
+    <span class="Welcome">
+      <br><br>
+      CoCafe
+    </span>
+  </div>
+    <br>
+    <article class="Login-Article">
+      <div>Add Admin ?</div>
+      <div class="SignUp">
+      <%= link_to "Add Admin Here", new_admin_path, id: "UP" %>
+    </div>
+      <br />
+    </article>
+    <article class="Login-Article">
+      <div>Add Item ?</div>
+      <div class="SignUp">
+      <%= link_to "Add Item Here", new_item_path, id: "IN" %>
+    </div>
+      <br />
+    </article>
+    <article class="Login-Article">
+      <div>All Food Items ?</div>
+      <div class="SignUp">
+      <%= link_to "See Food Items Here", items_path, method: "get", id: "IN" %>
+    </div>
+      <br />
+    </article>
+    <br>
+    <div class="Center-It"><%= link_to "Sign Out", destroy_session_path, method: "delete", :id => 'Admin-Sign-Out' %></div>
+  </body>
+</html>

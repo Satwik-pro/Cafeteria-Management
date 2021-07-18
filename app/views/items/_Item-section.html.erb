@@ -1,0 +1,10 @@
+<% MenuItem.order(:menu_category_id).each do |menu| %>
+<div class="Dish-Card">
+  <%= form_with(url: "/items/#{menu.menu_category_id}", method: "delete") do %>
+  <img class="Dish" src=<%= menu.description %>/>
+  <div class="Dish-Name"><%= menu.name %></div>
+  <div class="Dish-Price">Price: ₹ <%= menu.price %></div>
+  <%= button_tag("Remove From Menu", type: "submit", class: "Remove-From-Orders", :value => menu.menu_category_id, :name => "id") %>
+  <% end %>
+</div>
+<% end %>

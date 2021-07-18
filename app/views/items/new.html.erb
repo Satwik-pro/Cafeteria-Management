@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Item</title>
+  </head>
+  <body>
+    <div class="Login-Header">
+      <img src="Cocafe-logo.jpeg" alt="Logo" />
+    </div>
+    <br>
+    <div id="Error">
+      <%= flash[:error] %>
+    </div>
+    <article class="Login-Article">
+      <div>Add New Food Item</div>
+      <%= form_with url: items_path do |form| %>
+      <br /><br><br>
+      <span class="Email-Text"> Name of Item </span>
+      <br />
+      <%= form.text_field :name, :autofocus => true %>
+      <br /><br>
+      <span class="Email-Text"> Image URL / File Name </span>
+      <br />
+      <%= form.text_field :desc %>
+      <br /><br>
+      <span class="Email-Text"> Price of Item </span>
+      <br />
+      <%= form.text_field :price %>
+      <br /><br /><br>
+      <%= form.submit "Add Item", class: "Form-submit" %>
+      <br /><br /><br>
+  <% end %>
+      <br /><br />
+    </article>
+    <br />
+  </body>
+</html>

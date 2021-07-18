@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Admin</title>
+  </head>
+  <body class="Signup-Body">
+    <article class="Signup-Article">
+      <div class="Login-Header">
+        <img src="Cocafe-logo.jpeg" alt="Cocafe-Logo" />
+      </div>
+      <br />
+      <tag class="Cocafe-Tag"> CoCafe </tag>
+    </article>
+    <article class="Signup-Article-Form">
+      <%= form_with url: admins_path do |form| %>
+      <div>Add An Admin Account</div>
+      <br /><br>
+      <span class="Email-Text"> First Name </span>
+      <br />
+      <%= form.text_field :first_name, class: "Login-Input-Email", :autofocus => true %>
+      <br /><br>
+      <span class="Email-Text"> Last Name </span>
+      <br />
+      <%= form.text_field :last_name, class: "Login-Input-Email" %>
+      <br /><br>
+      <span class="Email-Text"> E-Mail Address </span>
+      <br />
+      <%= form.email_field :email, class: "Login-Input-Email" %>
+      <br /><br>
+      <span class="Email-Text"> Phone Number </span>
+      <br />
+      <%= form.text_field :ph_no, class: "Login-Input-Email" %>
+      <br /><br>
+      <span class="Email-Text"> Password </span>
+      <br />
+      <%= form.password_field :password, class: "Login-Input-Password" %>
+      <br /><br>
+      <br />
+      <%= form.submit "Sign-up", class: "Form-submit" %>
+      <% end %>
+      <br /><br />
+    </article>
+  </body>
+</html>
