@@ -661,3 +661,23 @@ body {
   padding: 10px 20px;
   border-radius: 20px;
 }
+
+.Order-Page {
+  width: 500px;
+  height: 300px;
+}
+
+.Row {
+  font-size: 30px;
+  padding: 10px;
+}
+
+.Order-Admin {
+  width: 500px;
+  height: 50px;
+}
+
+.Row-New {
+  font-size: 30px;
+  padding: 10px;
+}

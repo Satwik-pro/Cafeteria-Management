@@ -20,14 +20,13 @@
       <%= link_to "Sign Out", destroy_session_path, method: "delete", :id => 'Sign-Out' %>
     </header>
 
-    <!-- <navbar>
+    <navbar>
       <ul class="Navigation">
-          <li><a href="Menu.html">Menu</a></li>
-          <li><a href="Orderlist.html">Order List</a></li>
-          <li><a href="Myorders.html">My Orders</a></li>
-          <li><a href="Contactus.html">Contact Us</a></li>
+          <li><%= link_to "Menu", menu_items_path %></li>
+          <li><%= link_to "All Orders", all_orders_path %></li>
       </ul>
-    </navbar> -->
+    </navbar>
+
     <br /><br />
     <span class="Menu-Text">MENU</span>
     <br /><br />

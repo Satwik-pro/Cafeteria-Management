@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   resources :admins
   resources :order_items
   resources :orders
+  post "/all_orders", to: "all_orders#show"
+  get "/all_orders", to: "all_orders#index"
+  resources :all_orders
   resources :menu_items
   resources :menu_categories
   get "/items", to: "items#show"

@@ -1,0 +1,7 @@
+<% Order.order(:date).each do |order| %>
+<div class="Order-Page">
+  <div class="Row">Date of Order: <%= order.date %></div>
+  <div class="Row">Order ID: <%= order.id %></div>
+  <div class="Row">Status: <%= order.delivered ? "Delivered" : "On The Way" %></div>
+</div>
+<% end %>

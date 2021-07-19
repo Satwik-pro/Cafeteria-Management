@@ -11,6 +11,13 @@
   </div>
     <br>
     <article class="Login-Article">
+      <div>Check Pending Delivery ?</div>
+      <div class="SignUp">
+      <%= link_to "See Pending Deliveries", all_orders_path, method: "post", id: "IN" %>
+    </div>
+      <br />
+    </article>
+    <article class="Login-Article">
       <div>Add Admin ?</div>
       <div class="SignUp">
       <%= link_to "Add Admin Here", new_admin_path, id: "UP" %>
