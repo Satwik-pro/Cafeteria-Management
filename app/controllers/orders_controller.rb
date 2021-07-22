@@ -19,14 +19,6 @@ class OrdersController < ApplicationController
     redirect_to orders_path
   end
 
-  def show
-    id = params[:id].to_i
-    orders = Order.where("user_id = ?", id)
-    orders[0].delivered = true
-    orders[0].save!
-    redirect_to admins_path
-  end
-
   def update
     redirect_to menu_items_path
   end
